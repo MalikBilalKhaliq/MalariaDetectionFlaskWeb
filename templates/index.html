@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generater</title>
+    <link href='https://fonts.googleapis.com/css?fam  ily=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
+
+   <!-- Latest compiled and minified CSS -->
+{#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">#}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!---Pasted Header Code-->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+{#    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>#}
+
+    <script src="./static/js/form.js"></script>
+<style>
+input {
+	width: 70%;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.3);
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+</style>
+
+</head>
+
+<body>
+<div class="MainDiv">
+    <div class="container" style="margin-top: 100px;">
+        <div class="row">
+
+            <div class="col-sm-6">
+                <h1>Malaria Detection Through Microscopic images</h1>
+                <form method="POST" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label>Select image</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="image" id="image">
+                            <label class="custom-file-label" for="image">Select image...</label>
+                        </div>
+                    </div>
+
+                    <button id="detect_malaria_btn" class="btn btn-primary">Upload</button>
+
+                </form>
+                <h2>Result Text Will Display Below</h2>
+                <div id="successAlert_converter" class="alert alert-success" role="alert" style="display:none;"></div>
+                <div id="errorAlert_converter" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+                <div id="malariaDetectionResult"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>
